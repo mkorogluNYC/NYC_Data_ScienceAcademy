@@ -1,0 +1,26 @@
+"","district","type","subsidy","Total","Infant","Toddler","Preschooler","Kindergarten","Gradelevel"
+"1","Etobicoke York","City-Operated","Y",779,126,205,312,62,74
+"2","Etobicoke York","Commercial","N",2642,165,539,1327,209,402
+"3","Etobicoke York","Commercial","Y",1731,116,275,633,248,459
+"4","Etobicoke York","Non-Profit","N",908,20,109,556,15,208
+"5","Etobicoke York","Non-Profit","Y",8881,306,770,1562,2334,3909
+"6","North York","City-Operated","Y",471,46,75,152,80,118
+"7","North York","Commercial","N",2866,185,717,1734,85,145
+"8","North York","Commercial","Y",2218,186,489,912,220,411
+"9","North York","Non-Profit","N",1995,20,405,1153,152,265
+"10","North York","Non-Profit","Y",11795,402,1183,2881,2743,4586
+"11","Scarborough","City-Operated","Y",597,76,145,224,98,54
+"12","Scarborough","Commercial","N",1009,20,198,593,83,115
+"13","Scarborough","Commercial","Y",2559,231,460,1076,144,648
+"14","Scarborough","Non-Profit","N",933,10,58,328,123,414
+"15","Scarborough","Non-Profit","Y",6644,361,880,1790,1521,2092
+"16","Toronto East York","City-Operated","Y",815,110,180,280,100,145
+"17","Toronto East York","Commercial","N",3652,348,909,1984,272,139
+"18","Toronto East York","Commercial","Y",553,86,165,242,0,60
+"19","Toronto East York","Non-Profit","N",2004,20,355,1203,115,311
+"20","Toronto East York","Non-Profit","Y",15711,655,1740,4129,3868,5319
+"21","City of Toronto","City-Operated","Y",2662,358,605,968,340,391
+"22","City of Toronto","Commercial","N",10169,718,2363,5638,649,801
+"23","City of Toronto","Commercial","Y",7061,619,1389,2863,612,1578
+"24","City of Toronto","Non-Profit","N",5840,70,927,3240,405,1198
+"25","City of Toronto","Non-Profit","Y",43031,1724,4573,10362,10466,15906
