@@ -85,7 +85,43 @@ navbarPage("Toronto Child Care Study", id='nav',
              
              fluidRow(
                column(2,
+                      helpText('The overview of the number child care centres is provided in the Google pie chart. The line chart compares the number of children on the wait list with the number of child spaces in the City of Toronto.'),
+                      
+                      wellPanel(
+                        selectInput('by', 'Show by',
+                                    choices=c(
+                                      'subsidy',
+                                      'type',
+                                      'district'
+                                    ),
+                                    selected='subsidy',
+                                    multiple = FALSE
+                                    )
+                                )
+                      ),
+               
+               column(5,
+                      htmlOutput('gpieplot')),
+               
+               
+               column(5,
+                      htmlOutput('glineplot'))
+             ),
+             
+             br(),
+             br(),
+
+             fluidRow(
+               column(2,
                   wellPanel(
+                    
+                     selectInput('horizontal', 'Display horizontal axis by',
+                                        choices=c(
+                                          'district', 
+                                          'type'),
+                                        multiple = FALSE
+                                  ),
+                    
                       selectInput('childclass', 'Child Class',
                                   choices=c(
                                     'Total', 
@@ -95,7 +131,7 @@ navbarPage("Toronto Child Care Study", id='nav',
                                     'Kindergarten', 
                                     'Gradelevel'),
                                   multiple = FALSE
-                      ),
+                                  ),
                       
                       checkboxGroupInput('sub','Fee Subsidy Contract',
                                   choices=c(
@@ -104,10 +140,10 @@ navbarPage("Toronto Child Care Study", id='nav',
                                     'By Subsidy'='subsidy'
                                     ),
                                   selected=NULL
-                                ),
+                                    ),
                       helpText('Click on By Subsidy to compare number of child care centres for fee subsidy choice.')
-                  )
-                ),
+                          )
+                    ),
                hr(),
                column(5,
                       plotOutput('barplot')
@@ -116,20 +152,16 @@ navbarPage("Toronto Child Care Study", id='nav',
                column(5,
                       plotOutput('barplot2')
                       )
-                ),
-             
-             fluidRow(
-               column(12,
-                      htmlOutput('glineplot'))
-                  )
-          ),
+                )
+             ),
+            
     
     tabPanel('About This Application', 
              tags$div(
                   tags$p('Welcome to my Shiny application.'),
                   tags$p('This application has three purposes. In the first tab, the user can find the child care centres depending on his or her preferences given in the selection panel.'),
                   tags$p('Second tab allows the user to find the detail information about the child care centres.'),
-                  tags$p('The last panel provides the key insights obtained from the dataset. This page includes barplots for various variables and Google chart to represent better visual quality.'), br(),
+                  tags$p('The last panel provides the key insights obtained from the dataset. This page includes barplots for various variables and Google chart to visualize the overview of the child care centres in the City of Toronto.'), br(),
                   tags$p(
                     tags$h4('Data Source')), 
                   'Datasets in this application is obtained from the City of Toronto', 

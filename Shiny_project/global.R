@@ -1,3 +1,4 @@
+library(tidyr)
 library(data.table)
 library(dplyr)
 
@@ -8,6 +9,9 @@ library(dplyr)
 toronto_cc <- fread(input = "./toronto_cc.csv")
 
 toronto_cc <- toronto_cc[,-1]
+
+
+
 
 ###############
 ###Dataset 2###
@@ -43,14 +47,22 @@ numSpace_toronto2 <- filter(numSpace_toronto,
                                         'Scarborough',
                                         'Toronto East York'))
 
+numSpace_toronto_only <- filter(numSpace_toronto, district=='City of Toronto')
+
 
 ###################################
 ####Google chart specific options## 
 ###################################
 
-my_options <- list(width="600px", height="300px",
+my_options <- list(width="600px", height="400px",
                    title="Child Spaces vs Number of Children on Wait List",
-                   legend.position="{position: 'bottom'}"
+                   titleTextStyle="{fontSize: 14, italic: true}",
+                   hAxis="{title: 'Year'}",
+                   vAxis="{title: 'Number of Children and Child Spaces', maxValue: 75000,  minValue: 0}",
+                   legend="{position: 'bottom'}",
+                   selectionMode='multiple',
+                   explorer="{ actions: ['dragToZoom', 'rightClickToReset'],
+                              keepInBounds: true}" 
                   )
 
 
