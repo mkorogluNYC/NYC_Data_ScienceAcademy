@@ -85,7 +85,7 @@ navbarPage("Toronto Child Care Study", id='nav',
              
              fluidRow(
                column(2,
-                      helpText('The overview of the number child care centres is provided in the Google pie chart. The line chart compares the number of children on the wait list with the number of child spaces in the City of Toronto.'),
+                      helpText('The overview of the number of child care centres for the City of Toronto is provided in the Google column chart. The line chart compares the number of children on the wait list with the number of child spaces in the City of Toronto.'),
                       
                       wellPanel(
                         selectInput('by', 'Show by',
