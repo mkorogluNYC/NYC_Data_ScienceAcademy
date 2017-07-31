@@ -101,11 +101,11 @@ navbarPage("Toronto Child Care Study", id='nav',
                       ),
                
                column(5,
-                      htmlOutput('gpieplot')),
+                      htmlOutput('glineplot1')),
                
                
                column(5,
-                      htmlOutput('glineplot'))
+                      htmlOutput('glineplot2'))
              ),
              
              br(),

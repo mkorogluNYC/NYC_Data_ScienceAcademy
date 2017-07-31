@@ -142,16 +142,18 @@ function(input, output,session){
     
   })
   
-  output$gpieplot <- renderGvis({
+  output$glineplot1 <- renderGvis({
     
-    gvisPieChart(df_onlytoronto(), 
+    gvisColumnChart(df_onlytoronto(), 
                  options=list(width="600px", height="400px",
-                              title='Number of Child Care Centres-City of Toronto',
-                              titleTextStyle="{fontSize: 14, italic: true}"
+                              title='City of Toronto',
+                              titleTextStyle="{fontSize: 14, italic: true}",
+                              vAxis="{title: 'Number of Child Care Centre'}",
+                              legend="{position: 'none'}"
                  ))
   })
   
-  output$glineplot <- renderGvis({
+  output$glineplot2 <- renderGvis({
     
     gvisLineChart(num_wait_child, 
                   xvar='Date', 
